@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser</title>
+    <link rel="stylesheet" href="browser_style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="wrapper">
+            <h1 class="title">Item browser</h1>
+            <div class="search_bar">
+                <form class="search" id="searchForm">
+                    <input type="text" class="search_input">
+                    <select name="Catagory">
+                        <option selected="unsorted" value="unsorted">Unsorted</option>
+                        <option value="Ccothes">Clothes</option>
+                        <option value="hiking">Hiking</option>
+                        <option value="kayaking">Kayaking</option>
+                        <option value="windsurfing">Windsurfing</option>
+                        <option value="sailing">Sailing</option>
+                        <option value="kiting">Kiting</option>
+                        <option value="otherOutdoor">Other Outdoors</option>
+                        <option value="computers">Computers</option>
+                        <option value="cables">Cables</option>
+                        <option value="games">Games</option>
+                    </select>
+                    <select name="Location">
+                        <option selected="unknown" value="unknown">Unknown</option>
+                        <option value="missing">Missing</option>
+                        <option value="bedbox">Plastic Box Under Bed</option>
+                        <option value="wardrobe">Wardrobe</option>
+                        <option value="inCirculation">In Circulaton</option>
+                        <option value="bedroomDeskDrawers">Bedroom Desk Drawers</option>
+                        <option value="shed">Shed</option>
+                        <option value="frontRoom">Front Room</option>
+                        <option value="laundryRoom">Laundry Room</option>
+                        <option value="mums">Mums</option>
+                        <option value="hannahsParentsGarage">Hannahs Parents Garage</option>
+                    </select>
+                    <button class="search_submit" type="button" onclick="search()">Search</button>
+                </form>
+            </div>
+            <h3>Results:</h3>
+            <div class="search_results" id="searchResults">
+                <!--Items inserted here-->
+            </div>
+        </div>
+    </div>
+    
+    <script src="browser.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+html {
+
+}
+
+body {
+    
+}
+
+.container {
+    background-color: honeydew;
+}
+
+.wrapper {
+    background-color: lavender;
+}
+
+.title {
+
+}
+
+.search_bar {
+    background-color: gray;
+}
+
+.search {
+
+}
+
+.search_input {
+
+}
+
+.search_submit {
+
+}
+
+.search_results {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search_item {
+    border: 1px solid black;
+    width: 10em;
+    height: 15m;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.item_title {
+
+}
+
+.item_picture {
+    width: 80%;
+    padding-left: 10%;
+    
+}
+
+.item_details {
+
+}
