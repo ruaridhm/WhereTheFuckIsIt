@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browser</title>
-    <link rel="stylesheet" href="browser_style.css">
+    <title>Where The Fuck Is It?</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a9967e84d2.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
 </head>
-<body>
 
+<body>
     <div class="container">
+        <div class="header">
+            <h1 class="title">Where The Fuck Is It?</h1>
+            <button id="addItemDisplay" class="faButton show_add_form" onclick="showAddItem()"><i class="fas fa-plus-circle"></i></button>
+        </div>
         <div class="wrapper">
-            <h1 class="title">Item browser</h1>
+<!--SearchBar-->
             <div class="search_bar">
                 <form class="search" id="searchForm">
-                    <input type="text" class="search_input">
-                    <select name="Catagory">
-                        <option selected="unsorted" value="unsorted">Unsorted</option>
-                        <option value="Ccothes">Clothes</option>
+                    <input type="text" class="search_input" placeholder="Search...">
+                    <select name="Category" class="category_input">
+                        <option value="all" selected="All">Category...</option>
+                        <option value="unsorted">Unsorted</option>
+                        <option value="clothes">Clothes</option>
                         <option value="hiking">Hiking</option>
                         <option value="kayaking">Kayaking</option>
                         <option value="windsurfing">Windsurfing</option>
@@ -27,8 +35,9 @@
                         <option value="cables">Cables</option>
                         <option value="games">Games</option>
                     </select>
-                    <select name="Location">
-                        <option selected="unknown" value="unknown">Unknown</option>
+                    <select name="Location" class="location_input">
+                        <option value="all" selected="All">Location...</option>
+                        <option value="unknown">Unknown</option>
                         <option value="missing">Missing</option>
                         <option value="bedbox">Plastic Box Under Bed</option>
                         <option value="wardrobe">Wardrobe</option>
@@ -40,16 +49,75 @@
                         <option value="mums">Mums</option>
                         <option value="hannahsParentsGarage">Hannahs Parents Garage</option>
                     </select>
-                    <button class="search_submit" type="button" onclick="search()">Search</button>
+                    <button class="search_submit faButton" type="button" onclick="search()"><i class="fas fa-search"></i></button>
                 </form>
             </div>
-            <h3>Results:</h3>
+<!--Add Item Form-->
+            <div class="add_item_form" id="addItemForm">
+                <h2 class="title add_title">Add Item</h2>
+                <div class="addItemContainer">
+                    <form id="test" action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Item Name: </label>
+                            <input class="form-control" type="text" name="name" id="name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="amount">Amount: </label>
+                            <input class="form-control" type="number" name="amount" id="amount" />
+                        </div>
+                        <div class="form-group">
+                            <select name="category" class="form-control">
+                                <option value="all" selected="selected">Category</option>
+                                <option value="clothes">Clothes</option>
+                                <option value="hiking">hiking</option>
+                                <option value="kayaking">kayaking</option>
+                                <option value="windsurfing">windsurfing</option>
+                                <option value="sailing">sailing</option>
+                                <option value="kiting">kiting</option>
+                                <option value="otherOutdoor">otherOutdoor</option>
+                                <option value="computers">computers</option>
+                                <option value="cables">cables</option>
+                                <option value="games">games</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name="location" class="form-control">
+                                <option selected="all" value="all">Location</option>
+                                <option value="missing">Missing</option>
+                                <option value="bedbox">Plastic Box Under Bed</option>
+                                <option value="wardrobe">Wardrobe</option>
+                                <option value="inCirculation">In Circulaton</option>
+                                <option value="bedroomDeskDrawers">Bedroom Desk Drawers</option>
+                                <option value="shed">Shed</option>
+                                <option value="frontRoom">Front Room</option>
+                                <option value="laundryRoom">Laundry Room</option>
+                                <option value="mums">Mums</option>
+                                <option value="hannahsParentsGarage">Hannahs Parents Garage</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Comments: </label>
+                            <textarea class="form-control" name="message" rows="5" cols="20"
+                                placeholder="..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="file" id="real-file" hidden="hidden" />
+                            <button type="button" id="custom-button">CHOOSE A FILE</button>
+                            <span id="custom-text">No file chosen, yet.</span>
+                        </div>
+                        <p>
+                            <input type="submit" value="Send" class="faButtons btn btn-primary btn-block" />
+                        </p>
+                    </form>
+                    <pre id="output"></pre>
+                </div>
+            </div>
             <div class="search_results" id="searchResults">
                 <!--Items inserted here-->
             </div>
         </div>
     </div>
-    
     <script src="browser.js"></script>
 </body>
+
 </html>

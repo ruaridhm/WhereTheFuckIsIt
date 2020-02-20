@@ -1,37 +1,13 @@
-html {
-
-}
-
-body {
-    
-}
-
 .container {
-    background-color: honeydew;
+
 }
 
 .wrapper {
     background-color: lavender;
 }
 
-.title {
-
-}
-
 .search_bar {
     background-color: gray;
-}
-
-.search {
-
-}
-
-.search_input {
-
-}
-
-.search_submit {
-
 }
 
 .search_results {
@@ -47,16 +23,8 @@ body {
     padding-right: 1%;
 }
 
-.item_title {
-
-}
-
 .item_picture {
     width: 80%;
     padding-left: 10%;
     
-}
-
-.item_details {
-
 }

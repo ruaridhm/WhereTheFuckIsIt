@@ -1,0 +1,4 @@
+setup database as normal
+
+gui to look similar to a game characters inventory
+
